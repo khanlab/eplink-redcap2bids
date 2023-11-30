@@ -1,0 +1,83 @@
+api_url: 'https://redcap.braincode.ca/api/'
+
+#maps fields from redcap event forms to the participants.tsv
+# note: age_years is created in the script
+
+data_dictionary:
+  before_surgery_arm_1:
+    demographics:
+      age_years: age
+      What is the participant's sex? (Choose one): sex
+      What is the participant's hand preference? (Choose one): handedness
+    epilepsy_information:
+      Classification of seizures (check all that apply)  (choice=Focal): focal_seizures
+      Classification of seizures (check all that apply)  (choice=Generalized): generalized_seizures
+      Mesial temporal lobe epilepsy: mesial_temporal_lobe_epilepsy
+      Temporal lobe epilepsy: temporal_lobe_epilepsy
+      Frontal lobe epilepsy: frontal_lobe_epilepsy
+      Occipital lobe epilepsy: occipital_lobe_epilepsy
+      Parietal lobe epilepsy: parietal_lobe_epilepsy
+      Focal epilepsy (specific localization unknown): unknown_localization_focal_epilepsy
+    imaging:
+      Indicate if there is an Abnormality?: pet_abnormality
+      Temporal Lobe: pet_lateralization_temporal_lobe
+      Frontal Lobe: pet_lateralization_frontal_lobe
+      Parietal Lobe: pet_lateralization_parietal_lobe
+      Occipital Lobe: pet_lateralization_occipital_lobe
+      'Indicate if there is an Abnormality? ': spect_abnormality
+      Temporal Lobe.1: spect_lateralization_temporal_lobe
+      Frontal Lobe.1: spect_lateralization_frontal_lobe
+      Parietal Lobe.1: spect_lateralization_parietal_lobe
+      Occipital Lobe.1: spect_lateralization_occipital_lobe
+      Did a MEG spike cluster/focus occur?: meg_spike_cluster
+      Indicate if there is an Abnormality?.1: mri_1.5T_abnormality
+      Does the patient have Mesial Temporal Sclerosis?: mri_1.5T_mts
+      'Mesial Temporal Sclerosis location:': mri_1.5T_mts_location
+      Focal Cortical Dysplasia: mri_1.5T_fcd
+      Location of focal cortical dysplasia: mri_1.5T_fcd_location
+      'Any other epileptogenic lesions?  ': mri_1.5T_other_epileptogenic_lesion
+      'Any other epileptogenic lesions (describe finding and location):': mri_1.5T_other_epileptogenic_lesion_location
+      'Any other non-specific findings? ': mri_1.5T_other_nonspecific_findings
+      'Any other non-specific findings (describe finding and location):': mri_1.5T_other_nonspecific_findings_location
+      Indicate if there is an Abnormality?.2: mri_3T_abnormality
+      Does the patient have Mesial Temporal Sclerosis?.1: mri_3T_mts
+      Mesial Temporal Sclerosis location: mri_3T_mts_location
+      Focal Cortical Dysplasia.1: mri_3T_fcd
+      Location of focal cortical dysplasia.1: mri_3T_fcd_location
+      Any other epileptogenic lesions?  .1: mri_3T_other_epileptogenic_lesion
+      Any other epileptogenic lesions (describe finding and location):.1: mri_3T_other_epileptogenic_lesion_location
+      Any other non-specific findings? .1: mri_3T_other_nonspecific_findings
+      Any other non-specific findings (describe finding and location):.1: mri_3T_other_nonspecific_findings_location
+    additional_clinical_variables:
+      Temporal: eeg_seizures_lateralization_temporal
+      Frontal: eeg_seizures_lateralization_frontal
+      Occipital: eeg_seizures_lateralization_occipital
+      Parietal: eeg_seizures_lateralization_parietal
+      Insular: eeg_seizures_lateralization_insular
+      Temporal.1: eeg_spikes_lateralization_temporal
+      Frontal.1: eeg_spikes_lateralization_frontal
+      Occipital.1: eeg_spikes_lateralization_occipital
+      Parietal.1: eeg_spikes_lateralization_parietal
+      Insular.1: eeg_spikes_lateralization_insular
+      Temporal.3: ieeg_seizures_lateralization_temporal
+      Frontal.3: ieeg_seizures_lateralization_frontal
+      Occipital.3: ieeg_seizures_lateralization_occipital
+      Parietal.3: ieeg_seizures_lateralization_parietal
+      Insular.3: ieeg_seizures_lateralization_insular
+      Temporal.4: ieeg_spikes_lateralization_temporal
+      Frontal.4: ieeg_spikes_lateralization_frontal
+      Occipital.4: ieeg_spikes_lateralization_occipital
+      Parietal.4: ieeg_spikes_lateralization_parietal
+      Insular.4: ieeg_spikes_lateralization_insular
+  after_surgery_arm_1:
+    surgery_and_pathology:
+      Did the participant have resective surgery?: resective_surgery
+      What type of temporal lobe surgery?: temporal_lobe_surgery
+      Which side of the brain was the surgery performed on?: side_of_lesionectomy_surgery
+      Did the participant have a lesionectomy?: lesionectomy
+      Was intraoperative cortical stimulation performed?: intraoperative_cortical_stimulation
+      Did the participant have LITT surgery?: MRGLITT_surgery
+      Was a pathological analysis completed?: pathology_completed
+      'ILAE Hippocampal Sclerosis classification:': ilae_hippocampal_sclerosis_classification
+      'Additional hippocampus pathology details:': hippocampal_pathology_details
+      'Neocortical pathology details:': neocortical_pathology_details
